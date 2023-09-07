@@ -1,0 +1,384 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: hsl(218, 28%, 13%);
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+}
+
+/* Styling the header */
+
+header {
+  min-height: 10vh;
+  color: hsl(0, 0%, 100%);
+  width: 100%;
+  margin: 10px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  margin: 10px;
+  padding: 10px;
+}
+
+.nav {
+  display: inline-block;
+  margin-right: 10px;
+}
+.nav ul {
+  height: 20px;
+}
+.nav ul li {
+  list-style: none;
+  display: inline;
+  margin: 10px;
+}
+.nav ul li a {
+  text-decoration: none;
+  color: hsla(0, 0%, 100%, 0.7);
+}
+.nav ul li a:hover {
+  text-decoration: underline;
+  color: hsla(0, 90%, 100%, 1);
+  cursor: pointer;
+}
+/* header ends here */
+
+/* The body */
+main {
+  width: 100vw;
+  margin: 0 auto;
+  text-align: center;
+}
+.section {
+  padding: 10px;
+  margin: 10px;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  color: hsl(0, 0%, 100%);
+}
+.section-one-text {
+  margin: 10px;
+  padding: 10px;
+}
+.img {
+  max-width: 100%;
+}
+.heading {
+  font-weight: 700;
+  margin: 10px;
+}
+.paragraph {
+  font-weight: 400;
+  margin: 10px;
+  color: hsl(0, 0%, 100%);
+}
+.btn {
+  background-color: hsl(176, 68%, 64%);
+  color: hsl(0, 0%, 100%);
+  padding: 10px;
+  width: 250px;
+  border: none;
+  border-radius: 15px;
+}
+.btn:hover {
+  background-color: hsl(176, 68%, 75%);
+}
+/* styling the grid */
+.grid-container {
+  margin: 10px;
+  padding: 15px;
+  max-width: 100%;
+  width: 80vw;
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: 40% 40%;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.grid-item {
+  color: hsl(0, 0%, 100%);
+  padding: 10px;
+  text-align: center;
+}
+
+.grid-item .section-container {
+  margin: 0 auto;
+}
+
+/* Styling the flex */
+
+.flex-container {
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+.flex-item {
+  color: white;
+}
+.img2 {
+  width: 100%;
+}
+
+.item-2 {
+  text-align: left;
+  margin: 10px;
+  padding: 10px;
+}
+.one {
+  flex: 1;
+}
+.two {
+  flex: 1;
+}
+.link-wrap {
+  margin: 10px;
+}
+.link {
+  color: hsl(176, 68%, 64%);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1rem;
+}
+.link:hover {
+  color: hsl(0, 0%, 100%);
+}
+/* Styling the commment section */
+.comments-wrapper {
+  display: flex;
+  margin: 20px;
+  flex-direction: row;
+  gap: 20px;
+  color: hsl(0, 0%, 100%);
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto;
+}
+.comments-wrapper section {
+  flex-basis: 30%;
+  border: none;
+  border-radius: 10px;
+  background-color: hsl(219, 30%, 18%);
+  padding: 10px;
+  max-width: 350px;
+  font-size: 14px;
+}
+.comment {
+  margin: 10px;
+  padding: 10px;
+}
+.comment-profile {
+  margin: 10px;
+  margin-left: 0px;
+}
+.img {
+  display: inline;
+  width: fit-content;
+  height: fit-content;
+  float: left;
+  /* margin-left: 10px; */
+}
+.comment-img {
+  display: inline-block;
+  border-radius: 30px;
+}
+.commentator {
+  display: inline-block;
+  /* float: left; */
+  padding: 10px;
+  text-align: left;
+}
+.last-container {
+  position: relative;
+  height: 70vh;
+  margin-top: 10px;
+}
+/* Styling the last section */
+aside {
+  margin: 10px;
+  padding: 15px;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(217, 28%, 15%);
+  max-width: 600px;
+  width: 95vw;
+  margin: 0 auto;
+  text-align: center;
+  height: fit-content;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 25%;
+  z-index: 3;
+}
+aside div {
+  width: 98%;
+  height: fit-content;
+
+  margin: 0 auto;
+  padding: 10px;
+}
+.aside-text {
+  margin: 10px;
+  padding: 10px;
+}
+.aside-text p {
+  margin: 10px;
+}
+.input-flex {
+  margin-top: 10px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+.input {
+  flex: 60%;
+  width: 100%;
+  padding: 0%;
+  min-height: 30px;
+}
+.input input {
+  width: 100%;
+  height: 40px;
+  border-radius: 15px;
+  padding: 10px;
+  outline: none;
+}
+.button {
+  flex: 40%;
+  padding: 0%;
+}
+.button button {
+  height: 45px;
+  width: 100%;
+  border: none;
+  border-radius: 15px;
+  background-color: hsl(176, 68%, 64%);
+  color: hsl(0, 0%, 90%);
+}
+.button button:hover {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(176, 68%, 80%);
+}
+
+/* Styling the footer */
+footer {
+  background-color: hsl(216, 53%, 9%);
+  height: 60vh;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  margin: 0 auto;
+  z-index: -1;
+}
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  position: absolute;
+  top: 25%;
+}
+.flex-item1 {
+  flex-basis: 30%;
+}
+.flex-item-2 {
+  margin-top: 10px;
+}
+.footer-links {
+  list-style: none;
+  margin: 10px;
+  margin-left: 0%;
+  padding: 10px;
+}
+
+.links .footer-links li a {
+  text-decoration: none;
+  color: hsla(0, 0%, 100%, 0.7);
+}
+
+.footer-icons li {
+  list-style: none;
+}
+
+.footer-icon {
+  display: inline-block;
+  /* background-color: white; */
+  width: fit-content;
+  border: 3px solid white;
+  border-radius: 50%;
+  padding: 3px;
+  padding-top: 5px;
+}
+.last {
+  color: white;
+  text-decoration: none;
+}
+.footer-icon img {
+  width: 20px;
+  height: 15px;
+}
+
+@media only screen and (max-width: 500px) {
+  .heading-logo {
+    width: 20vw;
+  }
+  .grid-container,
+  .flex-container,
+  .comments-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .img2,
+  .item-2 {
+    width: 100%;
+    margin: 10px 0px;
+  }
+  .input-flex {
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    margin: 10px 0px;
+    gap: 15px;
+    padding: 0%;
+  }
+  .footer-container {
+    display: block;
+    flex-direction: column;
+    gap: 0;
+  }
+  aside {
+    width: 95vw;
+    max-width: 400px;
+  }
+  .nav ul li a {
+    font-size: 12px;
+  }
+}
