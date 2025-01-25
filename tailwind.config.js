@@ -29,6 +29,9 @@ module.exports = {
       baseFlex: {
         'flex items-center justify-center': 'flex items-center justify-center',
       },
+      fontFamily: {
+        raleway: ['Raleway', 'sans-serif'],
+      },
     },
   },
   plugins: [require('tailwindcss-animate')],

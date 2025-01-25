@@ -10,7 +10,7 @@ interface Props {
 const Header = ({ darkMode, setDarkMode }: Props) => {
   const [showMenu, setShowMenu] = useState<boolean>(false)
   return (
-    <header className="base-flex p-4 container">
+    <header className="base-flex p-4 container font-raleway">
       <Logo darkMode={darkMode} />
 
       {
@@ -23,8 +23,8 @@ const Header = ({ darkMode, setDarkMode }: Props) => {
         <ul
           className={
             showMenu
-              ? 'flex flex-col fixed left-0 top-10 right-0 bg-white dark:bg-[#181f2a] dark:text-white '
-              : 'hidden xs:base-flex basis-[60%] '
+              ? ' max-w-[200px] flex flex-col fixed left-0 top-10 right-0 bg-white dark:bg-[#181f2a] dark:text-white '
+              : 'max-w-[200px]  hidden xs:base-flex basis-[60%] '
           }
         >
           <li>Features</li>

@@ -14,7 +14,7 @@ const Hero = ({ darkMode }: { darkMode: boolean }) => {
       </div>
       <article className="basis-1/2">
         <div className="section-one-text">
-          <h3 className="font-bold text-3xl sm:text-4xl">
+          <h3 className="font-bold text-4xl sm:text-4xl font-raleway">
             All your files in one secure location,
             <br /> accesible anywhere.
           </h3>
