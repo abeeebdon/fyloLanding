@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ... */
+
+@layer utilities {
+  .base-flex {
+    @apply flex items-center justify-between gap-4;
+  }
+
+  .container {
+    @apply w-full max-w-[1440px] mx-auto p-4;
+  }
+}
