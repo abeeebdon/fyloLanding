@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react'
-import { FaFacebook, FaInstagram, FaMailBulk, FaPhone } from 'react-icons/fa'
+import { FaFacebookF, FaInstagram } from 'react-icons/fa'
 import { data } from './Data'
 import { FaX } from 'react-icons/fa6'
 import Hero from './Hero'
 import Header from './Header'
+import { CiMail } from 'react-icons/ci'
+import { FiPhoneCall } from 'react-icons/fi'
 
 function App() {
   const [darkMode, setDarkMode] = useState(
@@ -64,7 +66,7 @@ function App() {
           </div>
 
           <div className="basis-1/2 max-w-xl">
-            <h3 className="font-bold text-3xl">
+            <h3 className="font-bold text-4xl font-raleway">
               Stay productive,
               <br /> wherever you are
             </h3>
@@ -86,7 +88,7 @@ function App() {
         </section>
 
         {/* Testimonials section  */}
-        <div className="py-10 container">
+        <div className="py-10 container mt-10 mb-20">
           <div className="max-w-6xl mx-auto">
             <img src="/images/bg-quotes.png" alt="quotes" />
             <section className="mt-1 md:flex items-center justify-center gap-6">
@@ -118,9 +120,9 @@ function App() {
         </div>
       </article>
 
-      <article className="relative xl:mt-[250px] bg-[#1d2029]">
-        <div className="bg-[#1d2029]">
-          <section className="xl:absolute left-0 right-0 bottom-[80%] m-auto z-20 max-w-3xl mx-auto p-10 bg-[#1c2431] text-white rounded-lg">
+      <article className="relative xl:mt-[250px] ">
+        <div className="bg-blue  dark:bg-transparent ">
+          <section className="xl:absolute left-0 right-0 bottom-[80%] xl:m-auto z-20 max-w-3xl mx-auto p-10 bg-blue m-10 dark:bg-[#1c2431] text-white rounded-lg">
             <div className="text-center">
               <h3 className="text-3xl font-bold">Get early access today</h3>
               <p className="text-base my-6">
@@ -145,7 +147,7 @@ function App() {
           </section>
         </div>
 
-        <footer className="bg-[#0b1526] text-white px-4 py-[100px]">
+        <footer className="bg-dblue dark:bg-[#0b1526] text-white px-4 py-[100px]">
           <div className="container gap-4 base-flex flex-wrap">
             <div className="basis-[40%]">
               <img
@@ -163,19 +165,20 @@ function App() {
                 </p>
               </div>
 
-              <div className=" flex mt-6 gap-4 ">
-                <FaFacebook />
-                <FaX />
-                <FaInstagram />
+              <div className=" flex mt-6 gap-4 [&_svg]:text-2xl ">
+                <FaFacebookF className="hover:border hover:p-1 rounded-full border-white" />
+                <FaX className="hover:border hover:p-1 rounded-full border-white" />
+                <FaInstagram className="hover:border hover:p-1 rounded-full border-white" />
               </div>
             </div>
 
             <div className="basis-[25%] space-y-2">
               <div className="flex items-center gap-3">
-                <FaPhone /> +234-700-700-700
+                <FiPhoneCall /> +234-700-700-700
               </div>
               <div className="flex items-center gap-3">
-                <FaMailBulk /> example@fylo.com
+                <CiMail fontSize={20} className="font-bold text-white" />{' '}
+                example@fylo.com
               </div>
             </div>
             <div className="basis-[15%] list-none">
