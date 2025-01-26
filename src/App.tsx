@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { FaFacebookF, FaInstagram } from 'react-icons/fa'
+import { FaArrowAltCircleRight, FaFacebookF, FaInstagram } from 'react-icons/fa'
 import { data } from './Data'
 import { FaX } from 'react-icons/fa6'
 import Hero from './Hero'
@@ -66,7 +66,7 @@ function App() {
           </div>
 
           <div className="basis-1/2 max-w-xl">
-            <h3 className="font-bold text-4xl font-raleway">
+            <h3 className="font-bold text-4xl text-dblue ">
               Stay productive,
               <br /> wherever you are
             </h3>
@@ -78,11 +78,11 @@ function App() {
               Securely share files and folders with friends, family and
               colleagues for live collaboration. No email attachments required.
             </p>
-            <div className="mt-2 w-fit border-b border-moderateCyan text-moderateCyan p-1 flex gap-4">
+            <div className="mt-2 w-fit border-b border-brightBlue text-brightBlue p-1 flex items-center gap-4">
               <a href="#" className="link">
                 See how Fylo works
               </a>
-              <img src="/images/icon-arrow.svg" alt="img" />
+              <FaArrowAltCircleRight />
             </div>
           </div>
         </section>
@@ -122,7 +122,7 @@ function App() {
 
       <article className="relative xl:mt-[250px] ">
         <div className="bg-blue  dark:bg-transparent ">
-          <section className="xl:absolute left-0 right-0 bottom-[80%] xl:m-auto z-20 max-w-3xl mx-auto p-10 bg-blue m-10 dark:bg-[#1c2431] text-white rounded-lg">
+          <section className="xl:absolute left-0 right-0 bottom-[80%] xl:m-auto z-20 max-w-3xl mx-auto p-10 bg-blue m-10 mb-0 dark:bg-[#1c2431] text-white rounded-lg">
             <div className="text-center">
               <h3 className="text-3xl font-bold">Get early access today</h3>
               <p className="text-base my-6">

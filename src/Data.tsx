@@ -40,16 +40,16 @@ export const data: Data = {
     {
       comment:
         'Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.',
-      name: 'Satish Patel',
+      name: 'Bruce McKenzie ',
       details: 'Founder & CEO, Huddle',
-      img: 'profile-1',
+      img: 'profile-2',
     },
     {
       comment:
         'Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.',
-      name: 'Satish Patel',
+      name: 'Iva Boyd',
       details: 'Founder & CEO, Huddle',
-      img: 'profile-1',
+      img: 'profile-3',
     },
   ],
 }
