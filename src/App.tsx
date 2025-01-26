@@ -66,7 +66,7 @@ function App() {
           </div>
 
           <div className="basis-1/2 max-w-xl">
-            <h3 className="font-bold text-4xl text-dblue ">
+            <h3 className="font-bold text-4xl text-dblue dark:text-white">
               Stay productive,
               <br /> wherever you are
             </h3>
