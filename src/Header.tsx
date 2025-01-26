@@ -20,17 +20,19 @@ const Header = ({ darkMode, setDarkMode }: Props) => {
         // The menu should be hidden on large screens
       }
       <div className="xs:basis-[70%] lg:basis-[30%] flex items-center gap-6 justify-end text-black dark:text-lightGray ">
-        <ul
-          className={
+        <div
+          className={`
+             max-w-[200px] [&_p]:font-semibold
+          ${
             showMenu
-              ? ' max-w-[200px] flex flex-col fixed left-0 top-10 right-0 bg-white dark:bg-[#181f2a] dark:text-white '
-              : 'max-w-[200px]  hidden xs:base-flex basis-[60%] '
-          }
+              ? 'flex flex-col fixed left-0 top-10 right-0 bg-white dark:bg-[#181f2a] dark:text-white '
+              : 'hidden xs:base-flex basis-[60%] '
+          }          `}
         >
-          <li>Features</li>
-          <li>Team</li>
-          <li>Sign in</li>
-        </ul>
+          <p className="hover:text-white cursor-pointer">Features</p>
+          <p className="hover:text-white cursor-pointer">Team</p>
+          <p className="hover:text-white cursor-pointer">Sign in</p>
+        </div>
         <div className="xs:hidden" onClick={() => setShowMenu(!showMenu)}>
           {showMenu ? <FaTimes /> : <FaBars />}
         </div>
