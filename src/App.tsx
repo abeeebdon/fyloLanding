@@ -71,7 +71,7 @@ function App() {
                   initial={{ opacity: 0, x: i % 2 === 0 ? 100 : -100 }} // Even slides from right, Odd from left
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, ease: "easeOut" }}
-                  viewport={{ once: true }}
+                  viewport={{ once: false }}
                   className="text-center max-w-sm space-y-2"
                   key={i}
                 >
