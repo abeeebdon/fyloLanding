@@ -37,7 +37,7 @@ const Header = ({ darkMode, setDarkMode }: Props) => {
           })}
         </div>
         <div
-          className="sm:hidden cursor-pointer text-xl hover:text-white hover:shadow hover:shadow-slate-700"
+          className="sm:hidden cursor-pointer text-xl dark:hover:text-white hover:shadow hover:shadow-slate-700"
           onClick={() => setShowMenu(!showMenu)}
         >
           {!showMenu && <FaBars />}
@@ -54,7 +54,7 @@ const Header = ({ darkMode, setDarkMode }: Props) => {
         </button>
       </div>
       {showMenu && (
-        <article className="sm:hidden  fixed p-4 top-0 right-0 bottom-0  w-[90%] bg-white dark:bg-[#181f2a] dark:text-white">
+        <article className="sm:hidden  fixed p-4 top-0 right-0 bottom-0  w-[90%] bg-[#181f2a] dark:text-white">
           <div
             className="w-fit hover:text-white"
             onClick={() => setShowMenu(!showMenu)}
@@ -62,14 +62,17 @@ const Header = ({ darkMode, setDarkMode }: Props) => {
             <FaTimes
               size={32}
               color="hover:text-white"
-              className="dark:text-lightGray  cursor-pointer "
+              className=" cursor-pointer "
             />
           </div>
           <article className="flex w-full justify-end mt-5">
             <div className="flex flex-col gap-4  ">
               {nav.map((n, i) => {
                 return (
-                  <span className=" cursor-pointer hover:shadow" key={i}>
+                  <span
+                    className=" cursor-pointer hover:text-white text-lightGray text-lg"
+                    key={i}
+                  >
                     {n}
                   </span>
                 );
