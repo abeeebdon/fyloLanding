@@ -6,14 +6,14 @@ const Hero = ({ darkMode }: { darkMode: boolean }) => {
         <img
           src={
             darkMode
-              ? '/images/illustration-intro.png'
-              : '/images/illustration-1.svg'
+              ? "/images/illustration-intro.png"
+              : "/images/illustration-1.svg"
           }
           alt="illustration"
         />
       </div>
       <article className="basis-1/2">
-        <div className="section-one-text">
+        <div className="section-one-text sm:text-left text-center">
           <h3 className="font-bold text-4xl sm:text-4xl dark:text-white text-dblue">
             All your files in one secure location,
             <br /> accesible anywhere.
@@ -24,13 +24,14 @@ const Hero = ({ darkMode }: { darkMode: boolean }) => {
             family and co-workers
           </p>
         </div>
-
-        <button className="px-4  py-2 text-white bg-[#65e2d9] text-lg hover:bg-[#339ecc] rounded-2xl w-[250px] font-bold">
-          Get Started
-        </button>
+        <div className="w-full flex sm:justify-start justify-center items-center">
+          <button className="px-4 py-2 text-white  bg-[#339ecc] text-lg hover:bg-[rgb(101,226,237)] rounded-2xl w-full max-w-56  font-bold">
+            Get Started
+          </button>
+        </div>
       </article>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

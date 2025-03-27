@@ -1,16 +1,17 @@
-import { Dispatch, SetStateAction, useState } from 'react'
-import { CiDark } from 'react-icons/ci'
-import { FaBars, FaTimes } from 'react-icons/fa'
+import { Dispatch, SetStateAction, useState } from "react";
+import { CiDark } from "react-icons/ci";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 interface Props {
-  darkMode: boolean
+  darkMode: boolean;
 
-  setDarkMode: Dispatch<SetStateAction<boolean>>
+  setDarkMode: Dispatch<SetStateAction<boolean>>;
 }
+const nav: string[] = ["Features", "Team", "Sign in"];
 const Header = ({ darkMode, setDarkMode }: Props) => {
-  const [showMenu, setShowMenu] = useState<boolean>(false)
+  const [showMenu, setShowMenu] = useState<boolean>(false);
   return (
-    <header className="base-flex p-4 container font-raleway">
+    <header className="base-flex p-5 container font-raleway">
       <Logo darkMode={darkMode} />
 
       {
@@ -21,37 +22,64 @@ const Header = ({ darkMode, setDarkMode }: Props) => {
       }
       <div className="xs:basis-[70%] lg:basis-[30%] flex items-center gap-6 justify-end text-black dark:text-lightGray ">
         <div
-          className={`
-             max-w-[200px] [&_p]:font-semibold
-          ${
-            showMenu
-              ? 'flex flex-col fixed left-0 top-10 right-0 bg-white dark:bg-[#181f2a] dark:text-white '
-              : 'hidden xs:base-flex basis-[60%] '
-          }          `}
+          className="
+             max-w-56 [&_p]:font-semibold hidden sm:base-flex basis-[60%] "
         >
-          <p className="hover:text-white cursor-pointer">Features</p>
-          <p className="hover:text-white cursor-pointer">Team</p>
-          <p className="hover:text-white cursor-pointer">Sign in</p>
+          {nav.map((n, i) => {
+            return (
+              <p className="hover:text-white cursor-pointer" key={i}>
+                {n}
+              </p>
+            );
+          })}
         </div>
-        <div className="xs:hidden" onClick={() => setShowMenu(!showMenu)}>
-          {showMenu ? <FaTimes /> : <FaBars />}
+        <div
+          className="sm:hidden cursor-pointer text-xl hover:text-white hover:shadow hover:shadow-slate-700"
+          onClick={() => setShowMenu(!showMenu)}
+        >
+          {!showMenu && <FaBars />}
         </div>
 
         <button
           onClick={() => setDarkMode(!darkMode)}
-          className="p-2 bg-gray-200 dark:bg-gray-800 rounded-lg"
+          className="p-2 bg-gray-200 dark:bg-gray-800 hover:opacity-70 rounded-lg"
         >
           <CiDark
-            className={darkMode ? 'text-white' : 'text-black'}
+            className={darkMode ? "text-white" : "text-black"}
             size={20}
           />
         </button>
       </div>
+      {showMenu && (
+        <article className="sm:hidden fixed p-4 top-0 right-0 bottom-0  w-[90%] bg-white dark:bg-[#181f2a] dark:text-white">
+          <div
+            className="w-fit hover:text-white"
+            onClick={() => setShowMenu(!showMenu)}
+          >
+            <FaTimes
+              size={32}
+              color="hover:text-white"
+              className="dark:text-lightGray  cursor-pointer "
+            />
+          </div>
+          <article className="flex w-full justify-end mt-5">
+            <div className="flex flex-col gap-4  ">
+              {nav.map((n, i) => {
+                return (
+                  <span className=" cursor-pointer hover:shadow" key={i}>
+                    {n}
+                  </span>
+                );
+              })}
+            </div>
+          </article>
+        </article>
+      )}
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
 
 const Logo = ({ darkMode }: { darkMode: boolean }) => {
   return (
@@ -72,5 +100,5 @@ const Logo = ({ darkMode }: { darkMode: boolean }) => {
         />
       )}
     </div>
-  )
-}
+  );
+};

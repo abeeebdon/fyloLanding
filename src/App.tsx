@@ -1,26 +1,30 @@
-import { useEffect, useState } from 'react'
-import { FaArrowAltCircleRight, FaFacebookF, FaInstagram } from 'react-icons/fa'
-import { data } from './Data'
-import { FaX } from 'react-icons/fa6'
-import Hero from './Hero'
-import Header from './Header'
-import { CiMail } from 'react-icons/ci'
-import { FiPhoneCall } from 'react-icons/fi'
+import { useEffect, useState } from "react";
+import {
+  FaArrowAltCircleRight,
+  FaFacebookF,
+  FaInstagram,
+} from "react-icons/fa";
+import { data } from "./Data";
+import { FaX } from "react-icons/fa6";
+import Hero from "./Hero";
+import Header from "./Header";
+import { CiMail } from "react-icons/ci";
+import { FiPhoneCall } from "react-icons/fi";
 
 function App() {
   const [darkMode, setDarkMode] = useState(
-    () => localStorage.getItem('theme') === 'dark'
-  )
+    () => localStorage.getItem("theme") === "dark"
+  );
 
   useEffect(() => {
     if (darkMode) {
-      document.documentElement.classList.add('dark')
-      localStorage.setItem('theme', 'dark')
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
     } else {
-      document.documentElement.classList.remove('dark')
-      localStorage.setItem('theme', 'light')
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
     }
-  }, [darkMode])
+  }, [darkMode]);
   return (
     <main className=" dark:bg-background-main text-black dark:text-white min-h-screen">
       {/* Header  */}
@@ -31,8 +35,8 @@ function App() {
       {/* Access with curve  */}
       <div
         style={{
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
         }}
         className="bg-[url('/images/bg-curve-mobile.svg')] sm:bg-[url('/images/bg-curve-desktop.svg')]  bg-top dark:bg-center dark:bg-[url('/images/bg-curvy-mobile.svg')] sm:dark:bg-[url('/images/dark-bg-curvy-desktop.svg')] "
       >
@@ -48,7 +52,7 @@ function App() {
                 </div>
                 <p className="text-black dark:text-white">{item.paragraph}</p>
               </div>
-            )
+            );
           })}
         </section>
       </div>
@@ -58,14 +62,14 @@ function App() {
             <img
               src={
                 darkMode
-                  ? '/images/illustration-stay-productive.png'
-                  : '/images/illustration-2.svg'
+                  ? "/images/illustration-stay-productive.png"
+                  : "/images/illustration-2.svg"
               }
               alt="image"
             />
           </div>
 
-          <div className="basis-1/2 max-w-xl">
+          <div className="basis-1/2 max-w-xl text-center sm:text-left">
             <h3 className="font-bold text-4xl text-dblue dark:text-white">
               Stay productive,
               <br /> wherever you are
@@ -78,11 +82,11 @@ function App() {
               Securely share files and folders with friends, family and
               colleagues for live collaboration. No email attachments required.
             </p>
-            <div className="mt-2 w-fit border-b border-brightBlue text-brightBlue p-1 flex items-center gap-4">
-              <a href="#" className="link">
+            <div className="mt-2 w-full  justify-center sm:justify-start  p-1 flex items-center gap-4">
+              <p className="border-b border-brightBlue text-brightBlue">
                 See how Fylo works
-              </a>
-              <FaArrowAltCircleRight />
+              </p>
+              <FaArrowAltCircleRight className="text-brightBlue" />
             </div>
           </div>
         </section>
@@ -91,9 +95,9 @@ function App() {
         <div className="py-10 container mt-10 mb-20">
           <div className="max-w-6xl mx-auto">
             <img src="/images/bg-quotes.png" alt="quotes" />
-            <section className="mt-1 md:flex items-center justify-center gap-6">
+            <section className="mt-1 md:flex items-center justify-center space-y-6 md:space-y-0 gap-6">
               {data.comments.map((item, i) => {
-                const { name, details, comment, img } = item
+                const { name, details, comment, img } = item;
                 return (
                   <div
                     className="max-w-sm  mx-auto shadow p-6 bg-slate-100  dark:bg-background-testimonials rounded-2xl"
@@ -113,7 +117,7 @@ function App() {
                       </div>
                     </div>
                   </div>
-                )
+                );
               })}
             </section>
           </div>
@@ -148,7 +152,7 @@ function App() {
         </div>
 
         <footer className="bg-dblue dark:bg-[#0b1526] text-white px-4 py-[100px]">
-          <div className="container gap-4 base-flex flex-wrap">
+          <div className="container gap-4 space-y-4 sm:space-y-0 sm:base-flex flex-wrap">
             <div className="basis-[40%]">
               <img
                 src="/images/dlogo.svg"
@@ -177,7 +181,7 @@ function App() {
                 <FiPhoneCall /> +234-700-700-700
               </div>
               <div className="flex items-center gap-3">
-                <CiMail fontSize={20} className="font-bold text-white" />{' '}
+                <CiMail fontSize={20} className="font-bold text-white" />{" "}
                 example@fylo.com
               </div>
             </div>
@@ -195,8 +199,8 @@ function App() {
                 <a href="#">Blog</a>
               </li>
             </div>
-            <div className="basis-[15%]">
-              <ul className="footer-links">
+            <div className="basis-[15%] ">
+              <ul className="footer-links flex sm:flex-col gap-4">
                 <li>
                   <a href="#">Contact Us </a>
                 </li>
@@ -212,7 +216,7 @@ function App() {
         </footer>
       </article>
     </main>
-  )
+  );
 }
 
-export default App
+export default App;
