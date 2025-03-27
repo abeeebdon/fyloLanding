@@ -68,7 +68,7 @@ function App() {
             {data.seg1.map((item, i) => {
               return (
                 <motion.div
-                  initial={{ opacity: 0, x: i % 2 === 0 ? 100 : -100 }} // Even slides from right, Odd from left
+                  initial={{ opacity: 0, x: i % 2 === 0 ? 20 : -20 }} // Even slides from right, Odd from left
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, ease: "easeOut" }}
                   viewport={{ once: false }}
