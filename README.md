@@ -21,6 +21,8 @@ Users should be able to:
 
 ### Screenshot
 
+[image](./public/images/desktop-design.jpg/)
+
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
