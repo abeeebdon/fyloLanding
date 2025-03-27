@@ -1,6 +1,8 @@
-const Hero = ({ darkMode }: { darkMode: boolean }) => {
+import { HeroProps } from "./global";
+import { motion } from "motion/react";
+const Hero = ({ darkMode, setPop }: HeroProps) => {
   return (
-    <section className="max-w-[1200px] sm:p-4 p-6 my-10 mx-auto flex flex-col gap-10 sm:flex-row-reverse sm:base-flex">
+    <section className="max-w-[1400px] p-6  my-10 mx-auto flex flex-col gap-10 md:flex-row-reverse md:base-flex">
       {/* Illustration */}
       <div className="basis-1/2">
         <img
@@ -12,8 +14,8 @@ const Hero = ({ darkMode }: { darkMode: boolean }) => {
           alt="illustration"
         />
       </div>
-      <article className="basis-1/2">
-        <div className="section-one-text sm:text-left text-center">
+      <article className="md:basis-1/2">
+        <div className="section-one-text md:text-left text-center">
           <h3 className="font-bold text-4xl sm:text-4xl dark:text-white text-dblue">
             All your files in one secure location,
             <br /> accesible anywhere.
@@ -24,10 +26,18 @@ const Hero = ({ darkMode }: { darkMode: boolean }) => {
             family and co-workers
           </p>
         </div>
-        <div className="w-full flex sm:justify-start justify-center items-center">
-          <button className="px-4 py-2 text-white  bg-[#339ecc] text-lg hover:bg-[rgb(101,226,237)] rounded-2xl w-full max-w-56  font-bold">
+        <div className="w-full flex md:justify-start justify-center items-center">
+          <motion.button
+            onClick={() => setPop(true)}
+            whileHover={{
+              background: "linear-gradient(120deg, rgb(101,226,255), #339ecc)",
+              color: "#FFF",
+            }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="px-4 py-2 text-white  bg-[#339ecc] text-lg  rounded-2xl w-full max-w-56  font-bold"
+          >
             Get Started
-          </button>
+          </motion.button>
         </div>
       </article>
     </section>

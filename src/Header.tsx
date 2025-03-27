@@ -20,14 +20,17 @@ const Header = ({ darkMode, setDarkMode }: Props) => {
         // Team
         // The menu should be hidden on large screens
       }
-      <div className="xs:basis-[70%] lg:basis-[30%] flex items-center gap-6 justify-end text-black dark:text-lightGray ">
+      <div className="xs:basis-[70%] lg:basis-[40%] flex items-center gap-6 justify-end text-black dark:text-lightGray ">
         <div
           className="
-             max-w-56 [&_p]:font-semibold hidden sm:base-flex basis-[60%] "
+             max-w-60 [&_p]:font-semibold hidden sm:base-flex basis-[60%] "
         >
           {nav.map((n, i) => {
             return (
-              <p className="hover:text-white cursor-pointer" key={i}>
+              <p
+                className="dark:hover:text-white hover:text-slate-600 cursor-pointer"
+                key={i}
+              >
                 {n}
               </p>
             );
@@ -51,7 +54,7 @@ const Header = ({ darkMode, setDarkMode }: Props) => {
         </button>
       </div>
       {showMenu && (
-        <article className="sm:hidden fixed p-4 top-0 right-0 bottom-0  w-[90%] bg-white dark:bg-[#181f2a] dark:text-white">
+        <article className="sm:hidden  fixed p-4 top-0 right-0 bottom-0  w-[90%] bg-white dark:bg-[#181f2a] dark:text-white">
           <div
             className="w-fit hover:text-white"
             onClick={() => setShowMenu(!showMenu)}

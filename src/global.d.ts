@@ -1,1 +1,8 @@
-declare module '@fontsource/raleway'
+import { Dispatch, SetStateAction } from "react";
+
+declare module "@fontsource/raleway";
+
+export interface HeroProps {
+  darkMode: boolean;
+  setPop: Dispatch<SetStateAction<boolean>>;
+}

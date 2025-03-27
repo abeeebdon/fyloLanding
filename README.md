@@ -33,7 +33,6 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- Shadcn
 - Tailwind CSS
 - Mobile-first workflow
 - Motion
