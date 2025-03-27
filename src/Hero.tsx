@@ -1,5 +1,5 @@
-import { HeroProps } from "./global";
 import { motion } from "motion/react";
+import { HeroProps } from "./types";
 const Hero = ({ darkMode, setPop }: HeroProps) => {
   return (
     <section className="max-w-[1400px] p-6  my-10 mx-auto flex flex-col gap-10 md:flex-row-reverse md:base-flex">
