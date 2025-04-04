@@ -39,7 +39,6 @@ Users should be able to:
 - Mobile-first workflow
 - Motion
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
 
 ## Author
 
